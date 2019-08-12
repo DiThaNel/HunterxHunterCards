@@ -1,0 +1,33 @@
+export const Heroes = [
+  {
+    id: 1,
+    nombre: 'Gon Freecss',
+    edad: '13 Años de edad',
+    altura: '1.57cm',
+    peso: '45 kg',
+    tipo: 'In',
+    nem: 'Tipo Intensificador',
+    habilidades: 'Como un intensificador, debe ser bastante equilibrado entre ataque y defensa, pero él prefiere pasar a la ofensiva, ya que su terquedad tiende a salir durante el combate. Por ello, a veces ataca temerariamente, pero al mismo tiempo no se rinde hasta que no puede moverse más. Él es muy hábil en combate cuerpo a cuerpo después de haber sido entrenado en los fundamentos del Kung-fu Shingen-Ryu por Biscuit Krueger, así como a través de experiencia natural. La ira refuerza en gran medida sus habilidades, sobre todo al aumentar su ya notable aura. Su característica más notable, sin embargo, es el siniestro potencial, sin fondo del que está dotado.',
+    ocupacion: 'Cazador',
+    cumpleaños: '5 de Mayo',
+    img:'https://vignette.wikia.nocookie.net/anicrossbr/images/f/f9/Gon_freecss_by_kurumierika-d7fynmh.png/revision/latest?cb=20160307154825&path-prefix=pt-br',
+    estrellas: 1,
+    info:'Gon Freecss (ゴン = フリークス, Gon Furīkusu) es el protagonista de la serie de manga y anime Hunter × Hunter. Está en búsqueda de su padre, el famoso cazador Ging Freecss.',
+  },
+
+  {
+    id: 2,
+    nombre: 'Killua Zoldyck',
+    edad: '13 Años de edad',
+    altura: '1.57cm',
+    peso: '43 kg',
+    tipo: 'Tr',
+    nem: 'Tipo Transformador',
+    habilidades: 'Killua ha sido entrenado desde su nacimiento para convertirse en un arma humana, Su formación le dotó gran inmunidad al veneno, alta tolerancia a la electricidad, una gran agilidad y fuerza física, combate armada y desarmado avanzado y técnicas de sigilo, que adquirió a una edad temprana. Su intelecto y habilidades analíticas excepcionales son igualmente notables, y es a menudo a través de la estrategia que él puede derrotar a los oponentes que son más fuertes o tienen más experiencia que él. También es capaz de caminar sin hacer ruido y dormir con una mayor parte de su cerebro despierto de lo normal, por lo que puede evitar los ataques incluso en su sueño.',
+    ocupacion: 'Cazador',
+    cumpleaños: '15 de Junio',
+    img:'https://i.pinimg.com/originals/02/47/3a/02473abe79f22d154d0610308b726b57.png',
+    estrellas: 1,
+    info:'Killua Zoldyck (キルア・ゾルディック, Kirua Zorudikku) es el coprotagonista y el mejor amigo de Gon Freecss. Él es el tercero de los cinco hijos de la familia Zoldyck.',
+  },
+];
