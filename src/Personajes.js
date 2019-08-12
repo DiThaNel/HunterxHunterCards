@@ -43,6 +43,7 @@ const useStyles = makeStyles(theme => ({
       paddingTop: '80%', 
       backgroundPosition:'top',
       backgroundSize:'contain',
+      backgroundColor:'#ececec',
     },
     Rating: {
       color:'white',

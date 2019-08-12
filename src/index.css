@@ -42,8 +42,8 @@ h1{
   transition-timing-function: ease-out;
 }
 .grow:hover, .grow:focus, .grow:active {
-  -webkit-transform: translateY(-8px);
-  transform: translateY(-8px);
+  -webkit-transform: translateY(-1rem);
+  transform: translateY(-1rem);
 }
 
 /* flip de carta */
