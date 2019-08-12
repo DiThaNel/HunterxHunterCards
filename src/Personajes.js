@@ -7,7 +7,6 @@ import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import Tooltip from '@material-ui/core/Tooltip';
-import Fade from '@material-ui/core/Fade';
 import Rating from '@material-ui/lab/Rating';
 import Box from '@material-ui/core/Box';
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
@@ -21,21 +20,23 @@ const labels = {
 
 const useStyles = makeStyles(theme => ({
     card: {
-      maxWidth: 345,
+      maxWidth: 330,
+      maxHeight:499,
       display:'inline-block',
       margin:'3rem 1rem 1rem 1rem',
-      border:'double 3px #d0d0d0',
+      border:'double 3px #979797',
       cursor:'pointer',
     },
     CardHeader: {
-      background: 'linear-gradient(45deg, rgb(0, 80, 51) 30%, rgb(0, 200, 74) 90%)',
+      background: 'linear-gradient(45deg, rgb(21, 21, 21) 44%, rgb(241, 241, 241) 90%)',
       marginTop:'-2rem',
       position:'absolute',
       borderRadius: 7,
       marginLeft:'1rem',
-      boxShadow:'0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgb(0, 200, 74)',
+      boxShadow:'0 4px 20px 0 rgba(0, 0, 0, 0.24), 0 7px 10px -5px rgb(96, 96, 96)',
       textAlign:'center',
-      padding:'0rem 2rem 0rem 2rem',
+      padding:'0rem 2rem 0rem 1rem',
+      opacity:'0.8',
     },
     media: {
       height: '6rem',
@@ -43,20 +44,15 @@ const useStyles = makeStyles(theme => ({
       backgroundPosition:'top',
       backgroundSize:'contain',
     },
-    avatar: {
-      background: 'linear-gradient(45deg, rgb(0, 120, 74) 30%, rgb(0, 200, 74) 90%)',
-      cursor: 'pointer',
-      position: 'relative',
-    },
     Rating: {
       color:'white',
       cursor:'auto',
     },
     CardContent: {
-      borderTop:'double 3px #d0d0d0',
+      borderTop:'double 3px #979797',
     },
     Typography: {
-      fontSize:'1.2rem',
+      fontSize:'1.1rem',
       textAlign:'justify',  
       lineHeight:'1.5rem',    
       color:'#1f1f1f',
@@ -89,15 +85,15 @@ return (
         >
     <FrontSide>
       <Card className={classes.card} >
-          <CardHeader className={classes.CardHeader} 
+          <CardHeader className={classes.CardHeader}
+           
           avatar={
-            <Avatar aria-label="recipe" className={classes.avatar}>
-              <div>
-                <Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={nem} >
-                  <p>{tipo}</p>
-                </Tooltip>
-              </div>
-            </Avatar>
+            <div>
+              <Tooltip title={nem} aria-label="add">
+                <Avatar src={tipo} className={classes.avatar} >
+                </Avatar>
+              </Tooltip>
+            </div>
           }
           title={nombre} 
           subheader={edad} 
@@ -131,13 +127,12 @@ return (
       <Card className={classes.card} >
         <CardHeader className={classes.CardHeader}
           avatar={
-            <Avatar aria-label="recipe" className={classes.avatar}>
-              <div>
-                <Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={nem}>
-                  <p>{tipo}</p>
-                </Tooltip>
-              </div>
-            </Avatar>
+            <div>
+              <Tooltip title={nem} aria-label="add">
+                <Avatar src={tipo} className={classes.avatar} >
+                </Avatar>
+              </Tooltip>
+            </div>
           }
           title={nombre}
           subheader={edad}
