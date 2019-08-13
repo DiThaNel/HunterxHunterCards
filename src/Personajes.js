@@ -10,7 +10,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import Rating from '@material-ui/lab/Rating';
 import Box from '@material-ui/core/Box';
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
-
+import Fade from '@material-ui/core/Fade';
 
 const labels = {
   1: '1 Estrella (Cazador Individual): Entregada a los cazadores que han hecho una contribución significativa en algún campo de conocimientos. Si se es un veterano, al recibirla pasan a ser Oficiales Superiores.',
@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
       maxWidth: 330,
       maxHeight:499,
       display:'inline-block',
-      margin:'3rem 1rem 1rem 1rem',
+      margin:'4rem 0rem 0rem 2rem',
       border:'double 3px #979797',
       cursor:'pointer',
     },
@@ -36,14 +36,14 @@ const useStyles = makeStyles(theme => ({
       boxShadow:'0 4px 20px 0 rgba(0, 0, 0, 0.24), 0 7px 10px -5px rgb(96, 96, 96)',
       textAlign:'center',
       padding:'0rem 2rem 0rem 1rem',
-      opacity:'0.8',
+      opacity:'0.9',
     },
     media: {
       height: '6rem',
       paddingTop: '80%', 
       backgroundPosition:'top',
       backgroundSize:'contain',
-      backgroundColor:'#ececec',
+      backgroundColor:'#f5f5f5',
     },
     Rating: {
       color:'white',
@@ -51,6 +51,7 @@ const useStyles = makeStyles(theme => ({
     },
     CardContent: {
       borderTop:'double 3px #979797',
+      
     },
     Typography: {
       fontSize:'1.1rem',
@@ -63,6 +64,40 @@ const useStyles = makeStyles(theme => ({
       display: 'inline-flex',
       margin: '1.5rem 0 1rem 0',
     },
+    CardContent1: {
+      backgroundImage:"url('../../../../img/NEM.jpg')",
+      backgroundSize: 'cover',
+      backgroundPosition:'center',
+      backgroundRepeat: 'no-repeat',
+      height:'459px',
+      padding:'2.7rem 1rem 0rem 0.2rem',
+    },
+    posicion1: {
+      display:'flex',
+      paddingLeft:'8.73rem',
+      paddingTop:'2.1rem',
+    },
+    posicion2: {
+      display:'flex',
+      paddingTop:'2rem',
+    },
+    posicion3: {
+      display:'flex',
+      paddingLeft:'14.5rem',
+    },
+    posicion4: {
+      display:'flex',
+      paddingTop:'7.4rem'
+    },
+    posicion5: {
+      display:'flex',
+      paddingLeft:'14.5rem',
+    },
+    posicion6: {
+      display:'flex',
+      padding:'2.3rem 0rem 0rem 8.7rem',
+     
+    },
   }));
 
   function IconContainer(title) {
@@ -74,7 +109,7 @@ const useStyles = makeStyles(theme => ({
       );
   }
   
-  export default function RecipeReviewCard({nombre,img,edad,tipo,nem,info,estrellas,habilidades}) {
+  export default function RecipeReviewCard({nombre,img,edad,tipo,nem,info,estrellas,habilidad1,habilidad2,habilidad3,habilidad4,habilidad5,habilidad6}) {
     const classes = useStyles();
 
 return (
@@ -90,7 +125,7 @@ return (
            
           avatar={
             <div>
-              <Tooltip title={nem} aria-label="add">
+              <Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={nem}>
                 <Avatar src={tipo} className={classes.avatar} >
                 </Avatar>
               </Tooltip>
@@ -103,7 +138,7 @@ return (
             <div>
               <Box className={classes.Box} component="fieldset" borderColor="transparent">
                 <Rating className={classes.Rating} name="hover-tooltip" value={estrellas} max={3} 
-                IconContainerComponent={IconContainer}
+                IconContainerComponent={IconContainer} 
                 />
               </Box>
             </div>
@@ -129,7 +164,7 @@ return (
         <CardHeader className={classes.CardHeader}
           avatar={
             <div>
-              <Tooltip title={nem} aria-label="add">
+              <Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={nem}>
                 <Avatar src={tipo} className={classes.avatar} >
                 </Avatar>
               </Tooltip>
@@ -149,10 +184,12 @@ return (
           }
         />
         
-        <CardContent>
+        <CardContent className={classes.CardContent1}>
           <Typography className={classes.Typography} variant="body">
-            <h1>Habilidades y Poderes</h1>
-            <p>{habilidades}</p>
+            <div className={classes.posicion1}><Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={habilidad1}><Avatar src={tipo} className={classes.avatar} ></Avatar></Tooltip></div>
+            <div className={classes.posicion2}><Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={habilidad2}><Avatar src={tipo} className={classes.avatar} ></Avatar></Tooltip><div className={classes.posicion3}><Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={habilidad3}><Avatar src={tipo} className={classes.avatar} ></Avatar></Tooltip></div></div>
+            <div className={classes.posicion4}><Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={habilidad4}><Avatar src={tipo} className={classes.avatar} ></Avatar></Tooltip><div className={classes.posicion5}><Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={habilidad5}><Avatar src={tipo} className={classes.avatar} ></Avatar></Tooltip></div></div>
+            <div className={classes.posicion6}><Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={habilidad6}><Avatar src={tipo} className={classes.avatar} ></Avatar></Tooltip></div>
           </Typography>
         </CardContent>
       </Card>
