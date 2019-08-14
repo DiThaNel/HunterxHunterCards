@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
       maxWidth: 330,
       maxHeight:499,
       display:'inline-block',
-      margin:'4rem 0rem 0rem 2rem',
+      margin:'4rem 0rem 0rem 1rem',
       border:'double 3px #979797',
       cursor:'pointer',
     },
@@ -43,7 +43,6 @@ const useStyles = makeStyles(theme => ({
       paddingTop: '80%', 
       backgroundPosition:'top',
       backgroundSize:'contain',
-      backgroundColor:'#f5f5f5',
     },
     Rating: {
       color:'white',
@@ -114,7 +113,7 @@ const useStyles = makeStyles(theme => ({
 
 return (
 <div className='grow'>
-  <Flippy
+        <Flippy
           flipOnHover={false}
           flipOnClick={true}
           flipDirection="horizontal" 
