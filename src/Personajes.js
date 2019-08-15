@@ -50,6 +50,7 @@ const useStyles = makeStyles(theme => ({
     },
     CardContent: {
       borderTop:'double 3px #979797',
+      textAlign:'justify',
       
     },
     Typography: {
@@ -97,6 +98,9 @@ const useStyles = makeStyles(theme => ({
       padding:'2.3rem 0rem 0rem 8.7rem',
      
     },
+    Tooltip: {
+      textAlign:'justify',
+    },
   }));
 
   function IconContainer(title) {
@@ -118,13 +122,13 @@ return (
           flipOnClick={true}
           flipDirection="horizontal" 
         >
-    <FrontSide>
+    <FrontSide animationDuration={700}>
       <Card className={classes.card} >
           <CardHeader className={classes.CardHeader}
            
           avatar={
             <div>
-              <Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={nem}>
+              <Tooltip className={classes.Tooltip} TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={nem}>
                 <Avatar src={tipo} className={classes.avatar} >
                 </Avatar>
               </Tooltip>
@@ -158,7 +162,7 @@ return (
       </Card>
     </FrontSide>
       
-    <BackSide>
+    <BackSide animationDuration={700}>
       <Card className={classes.card} >
         <CardHeader className={classes.CardHeader}
           avatar={
