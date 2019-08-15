@@ -17,7 +17,6 @@ const useStyles = makeStyles(theme => ({
     width:'130px',
     height:'55px',
     padding:'0.5rem',
-    filter:'grayscale(1)',
     transition: '.3s ease-in-out',
     display:'flex',
     '&:hover': {

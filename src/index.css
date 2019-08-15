@@ -3,11 +3,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family:'Teko', sans-serif;
-  font-size:'1.2rem';
+  font-size:1.2rem;
   text-align:center;
-  line-height:'1.5rem'; 
+  line-height:1.5rem; 
   font-weight: lighter;
-  background-image:url('file:///C:/Users/Gabriel Goncalves/Desktop/Proyecto App/Hunterapp/public/img/BG.jpg');
   
 }
 h1{

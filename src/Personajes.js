@@ -12,6 +12,7 @@ import Box from '@material-ui/core/Box';
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 import Fade from '@material-ui/core/Fade';
 
+
 const labels = {
   1: '1 Estrella (Cazador Individual): Entregada a los cazadores que han hecho una contribución significativa en algún campo de conocimientos. Si se es un veterano, al recibirla pasan a ser Oficiales Superiores.',
   2: '2 Estrellas (Cazador Doble): Los cazadores con 1 Estrella, que han logrado que sus aprendices reciban 1 Estrella, reciben 2 Estrellas.',
@@ -51,12 +52,12 @@ const useStyles = makeStyles(theme => ({
     CardContent: {
       borderTop:'double 3px #979797',
       textAlign:'justify',
-      
+      background:'#f6f6f64d',
     },
     Typography: {
       fontSize:'1.1rem',
       textAlign:'justify',  
-      lineHeight:'1.5rem',    
+      lineHeight:'1.2rem',    
       color:'#1f1f1f',
       fontWeight:'500',
     },
@@ -104,34 +105,39 @@ const useStyles = makeStyles(theme => ({
   }));
 
   function IconContainer(title) {
-    const { value, ...other } = title;
+    const { value, ...id } = title;
       return (
         <Tooltip title={labels[value]}>
-          <div {...other} />
+          <div {...id} />
         </Tooltip>
       );
   }
   
   export default function RecipeReviewCard({nombre,img,edad,tipo,nem,info,estrellas,habilidad1,habilidad2,habilidad3,habilidad4,habilidad5,habilidad6}) {
     const classes = useStyles();
-
+    
 return (
+  
 <div className='grow'>
+  <Fade in={true} timeout={1200}>
         <Flippy
           flipOnHover={false}
           flipOnClick={true}
           flipDirection="horizontal" 
         >
-    <FrontSide animationDuration={700}>
+          
+    <FrontSide  animationDuration={700}>
       <Card className={classes.card} >
           <CardHeader className={classes.CardHeader}
            
           avatar={
             <div>
+            
               <Tooltip className={classes.Tooltip} TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={nem}>
                 <Avatar src={tipo} className={classes.avatar} >
                 </Avatar>
               </Tooltip>
+              
             </div>
           }
           title={nombre} 
@@ -139,7 +145,7 @@ return (
 
           action={
             <div>
-              <Box className={classes.Box} component="fieldset" borderColor="transparent">
+              <Box className={classes.Box} component="fieldset" borderColor="transparent" m={1}>
                 <Rating className={classes.Rating} name="hover-tooltip" value={estrellas} max={3} 
                 IconContainerComponent={IconContainer} 
                 />
@@ -161,6 +167,7 @@ return (
         </CardContent>
       </Card>
     </FrontSide>
+    
       
     <BackSide animationDuration={700}>
       <Card className={classes.card} >
@@ -197,8 +204,11 @@ return (
         </CardContent>
       </Card>
     </BackSide>
+    
   </Flippy>
+  </Fade>
 </div>
+
 );}
   
 
