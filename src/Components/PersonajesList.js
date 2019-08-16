@@ -5,8 +5,8 @@ const PersonajesList = ({Heroes}) => {
     return (
         <div>
             {
-                Heroes.map((user,i) => {
-                    return (
+             Heroes.map((user,i) => {
+                return (
                         <Personajes 
                         key={i} 
                         id={Heroes[i].id} 
@@ -24,7 +24,8 @@ const PersonajesList = ({Heroes}) => {
                         habilidad5={Heroes[i].habilidad5} 
                         habilidad6={Heroes[i].habilidad6}
                         />
-                    );})
+                );
+            })
             }
         </div>
     );

@@ -7,7 +7,7 @@ body {
   text-align:center;
   line-height:1.5rem; 
   font-weight: lighter;
-  
+  margin-bottom: 2rem;
 }
 h1{
   margin-top: 4rem;
@@ -18,18 +18,15 @@ h1{
 .MuiTooltip-popper{
   text-align: justify;
 }
-
 .MuiTypography-displayBlock {
   color:white !important;
   font-family:'Teko', sans-serif !important;
   font-size: 1.2rem !important;
   line-height: 1.2rem !important;
 }
-
 .MuiPaper-elevation1 {
   box-shadow:0px 1px 3px 0px rgba(0,0,0,0.5), 0px 1px 1px 0px rgba(0,0,0,0.5), 0px 2px 1px -1px rgba(0,0,0,0.5) !important
 }
-
 /* Flote de carta */
 .grow {
   display: inline-block;
@@ -48,7 +45,6 @@ h1{
   -webkit-transform: translateY(-0.5rem);
   transform: translateY(-0.5rem);
 }
-
 /* flip de carta */
 .flippy-front, .flippy-back{
   box-shadow: none !important;
@@ -57,7 +53,6 @@ h1{
 .flippy-container *{
   box-sizing:content-box !important;
 }
-
 /* Tipo Efecto*/
 .MuiAvatar-root {
     -webkit-transition: box-shadow 0.5s;
@@ -65,6 +60,7 @@ h1{
     transition: box-shadow 0.5s;
     font-size: 1rem;
     border: #fff 3px double;
+    z-index: 999;
 }
 .MuiAvatar-root:after {
     box-shadow: 0 0 0 2px #fff;

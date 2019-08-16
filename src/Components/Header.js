@@ -6,12 +6,13 @@ import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
   },
   AppBar:{
-    background: 'linear-gradient(45deg,rgb(51, 51, 51) 44%,  rgb(241, 241, 241)  90%)',
+    background: 'linear-gradient(45deg, rgb(64, 64, 64) 44%, rgb(241, 241, 241) 90%)',
   },
   logo:{
     width:'130px',
@@ -75,8 +76,9 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function SearchAppBar({Busqueda}) {
+export default function SearchAppBar({Busqueda,props}) {
   const classes = useStyles();
+
 
   return (
     <div className={classes.root}>

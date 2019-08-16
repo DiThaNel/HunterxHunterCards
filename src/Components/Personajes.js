@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
       cursor:'pointer',
     },
     CardHeader: {
-      background: 'linear-gradient(45deg, rgb(21, 21, 21) 44%, rgb(241, 241, 241) 90%)',
+      background: 'linear-gradient(45deg, rgb(64, 64, 64) 44%, rgb(241, 241, 241) 90%)',
       marginTop:'-2rem',
       position:'absolute',
       borderRadius: 7,
@@ -52,7 +52,8 @@ const useStyles = makeStyles(theme => ({
     CardContent: {
       borderTop:'double 3px #979797',
       textAlign:'justify',
-      background:'#f6f6f64d',
+      backgroundImage:"url('../../../../img/CardBg.jpg')",
+      backgroundSize:'contain',
     },
     Typography: {
       fontSize:'1.1rem',
@@ -66,38 +67,84 @@ const useStyles = makeStyles(theme => ({
       margin: '1.5rem 0 1rem 0',
     },
     CardContent1: {
-      backgroundImage:"url('../../../../img/NEM.jpg')",
+      backgroundImage:"url('../../../../img/NEMbg.jpg')",
       backgroundSize: 'cover',
       backgroundPosition:'center',
       backgroundRepeat: 'no-repeat',
       height:'459px',
-      padding:'2.7rem 1rem 0rem 0.2rem',
+      width:'300px',
+      padding:'15px',
     },
     posicion1: {
       display:'flex',
-      paddingLeft:'8.73rem',
-      paddingTop:'2.1rem',
+      justifyContent:'Center',
+      paddingTop:'4rem',
+    },
+    posicion1l: {
+      position:'absolute',
+      height: '9rem',
+      transform: 'rotate(-57deg)',
+      margin: 'auto',
+      marginLeft:'5rem',
+      borderLeft:'1px solid white',
+    },
+    posicion1l1: {
+      position:'absolute',
+      height: '9rem',
+      transform: 'rotate(57deg)',
+      margin: 'auto',
+      marginLeft:'-5rem',
+      borderLeft:'1px solid white',
     },
     posicion2: {
       display:'flex',
       paddingTop:'2rem',
+      justifyContent:'space-between',
+    },
+    posicion2l: {
+      position:'absolute',
+      height: '8rem',
+      transform: 'rotate(0deg)',
+      margin:'auto',
+      marginTop: '2.7rem',
+      marginLeft:'1.43rem',
+      borderLeft:'1px solid white',
+    },
+    posicion2l1: {
+      position:'absolute',
+      height: '8rem',
+      transform: 'rotate(0deg)',
+      margin:'auto',
+      marginTop: '2.7rem',
+      marginLeft:'17.43rem',
+      borderLeft:'1px solid white',
+      padding:'0.01rem'
     },
     posicion3: {
       display:'flex',
-      paddingLeft:'14.5rem',
+      paddingTop:'6.4rem',
+      justifyContent:'space-between',
+    },
+    posicion3l: {
+      position:'absolute',
+      height: '9rem',
+      transform: 'rotate(-57deg)',
+      margin: 'auto',
+      marginLeft:'6.2rem',
+      borderLeft:'1px solid white',
+    },
+    posicion3l1: {
+      position:'absolute',
+      height: '8rem',
+      transform: 'rotate(57deg)',
+      margin: 'auto',
+      marginLeft:'13rem',
+      borderLeft:'1px solid white',
     },
     posicion4: {
       display:'flex',
-      paddingTop:'7.4rem'
-    },
-    posicion5: {
-      display:'flex',
-      paddingLeft:'14.5rem',
-    },
-    posicion6: {
-      display:'flex',
-      padding:'2.3rem 0rem 0rem 8.7rem',
-     
+      justifyContent:'Center',
+      paddingTop:'2rem'
     },
     Tooltip: {
       textAlign:'justify',
@@ -112,8 +159,8 @@ const useStyles = makeStyles(theme => ({
         </Tooltip>
       );
   }
-  
-  export default function RecipeReviewCard({nombre,img,edad,tipo,nem,info,estrellas,habilidad1,habilidad2,habilidad3,habilidad4,habilidad5,habilidad6}) {
+
+  export default function RecipeReviewCard({nombre,img,edad,tipo,nem,info,estrellas,habilidad1,habilidad2,habilidad3,habilidad4,habilidad5,habilidad6,children}) {
     const classes = useStyles();
     
 return (
@@ -124,25 +171,22 @@ return (
           flipOnHover={false}
           flipOnClick={true}
           flipDirection="horizontal" 
+          
         >
           
     <FrontSide  animationDuration={700}>
       <Card className={classes.card} >
           <CardHeader className={classes.CardHeader}
-           
           avatar={
             <div>
-            
               <Tooltip className={classes.Tooltip} TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={nem}>
                 <Avatar src={tipo} className={classes.avatar} >
                 </Avatar>
-              </Tooltip>
-              
+              </Tooltip>   
             </div>
           }
           title={nombre} 
-          subheader={edad} 
-
+          subheader={edad}
           action={
             <div>
               <Box className={classes.Box} component="fieldset" borderColor="transparent" m={1}>
@@ -153,13 +197,11 @@ return (
             </div>
           }
         />
-
-        <CardMedia
+        <CardMedia 
           className={classes.media}
           image = {img}
           title={nombre}
         />
-
         <CardContent className={classes.CardContent}>
           <Typography className={classes.Typography} variant="body">
             {info}
@@ -168,7 +210,6 @@ return (
       </Card>
     </FrontSide>
     
-      
     <BackSide animationDuration={700}>
       <Card className={classes.card} >
         <CardHeader className={classes.CardHeader}
@@ -182,7 +223,6 @@ return (
           }
           title={nombre}
           subheader={edad}
-
           action={
             <div>
               <Box className={classes.Box} component="fieldset" borderColor="transparent">
@@ -193,22 +233,31 @@ return (
             </div>
           }
         />
-        
         <CardContent className={classes.CardContent1}>
           <Typography className={classes.Typography} variant="body">
-            <div className={classes.posicion1}><Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={habilidad1}><Avatar src={tipo} className={classes.avatar} ></Avatar></Tooltip></div>
-            <div className={classes.posicion2}><Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={habilidad2}><Avatar src={tipo} className={classes.avatar} ></Avatar></Tooltip><div className={classes.posicion3}><Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={habilidad3}><Avatar src={tipo} className={classes.avatar} ></Avatar></Tooltip></div></div>
-            <div className={classes.posicion4}><Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={habilidad4}><Avatar src={tipo} className={classes.avatar} ></Avatar></Tooltip><div className={classes.posicion5}><Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={habilidad5}><Avatar src={tipo} className={classes.avatar} ></Avatar></Tooltip></div></div>
-            <div className={classes.posicion6}><Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={habilidad6}><Avatar src={tipo} className={classes.avatar} ></Avatar></Tooltip></div>
+            <div className={classes.posicion1}><Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={habilidad1}><Avatar src={tipo} className={classes.avatar} ></Avatar></Tooltip>
+            <hr className={classes.posicion1l}></hr>
+            <hr className={classes.posicion1l1}></hr>
+            </div>
+            <div className={classes.posicion2}><Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={habilidad2}><Avatar src={tipo} className={classes.avatar} ></Avatar></Tooltip>
+            <hr className={classes.posicion2l}></hr>
+            <hr className={classes.posicion2l1}></hr>
+            <Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={habilidad3}><Avatar src={tipo} className={classes.avatar} ></Avatar></Tooltip>         
+            </div>
+            <div className={classes.posicion3}><Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={habilidad4}><Avatar src={tipo} className={classes.avatar} ></Avatar></Tooltip>
+            <hr className={classes.posicion3l}></hr> 
+            <Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={habilidad5}><Avatar src={tipo} className={classes.avatar} ></Avatar></Tooltip>
+            <hr className={classes.posicion3l1}></hr> 
+            </div>
+            <div className={classes.posicion4}><Tooltip TransitionComponent={Fade} TransitionProps={{ timeout: 600 }} title={habilidad6}><Avatar src={tipo} className={classes.avatar} ></Avatar></Tooltip>
+            </div>
           </Typography>
         </CardContent>
       </Card>
     </BackSide>
-    
   </Flippy>
   </Fade>
 </div>
-
 );}
   
 
