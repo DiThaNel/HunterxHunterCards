@@ -13,6 +13,7 @@ const useStyles = makeStyles(theme => ({
   },
   AppBar:{
     background: 'linear-gradient(45deg, rgb(64, 64, 64) 44%, rgb(241, 241, 241) 90%)',
+    opacity:'0.9',
   },
   logo:{
     width:'130px',

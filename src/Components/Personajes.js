@@ -24,9 +24,10 @@ const useStyles = makeStyles(theme => ({
       maxWidth: 330,
       maxHeight:499,
       display:'inline-block',
-      margin:'4rem 0rem 0rem 1rem',
+      margin:'4rem 0.5rem 0rem 0.5rem',
       border:'double 3px #979797',
       cursor:'pointer',
+      
     },
     CardHeader: {
       background: 'linear-gradient(45deg, rgb(64, 64, 64) 44%, rgb(241, 241, 241) 90%)',
