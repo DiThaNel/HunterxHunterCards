@@ -68,7 +68,7 @@ const useStyles = makeStyles(theme => ({
       margin: '1.5rem 0 1rem 0',
     },
     CardContent1: {
-      backgroundImage:"url('../../../../img/NEMbg.jpg')",
+      backgroundImage:"url('https://raw.githubusercontent.com/DiThaNel/HunterxHunterCards/master/public/img/NEMbg.jpg')",
       backgroundSize: 'cover',
       backgroundPosition:'center',
       backgroundRepeat: 'no-repeat',
