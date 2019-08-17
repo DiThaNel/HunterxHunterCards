@@ -8,7 +8,7 @@ body {
   line-height:1.5rem; 
   font-weight: lighter;
   margin-bottom: 2rem;
-  background-image: url("/img/CardBg.jpg");
+  background-image: url("https://raw.githubusercontent.com/DiThaNel/HunterxHunterCards/master/public/img/CardBg.jpg");
 }
 h1{
   margin-top: 4rem;
