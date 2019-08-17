@@ -53,7 +53,7 @@ const useStyles = makeStyles(theme => ({
     CardContent: {
       borderTop:'double 3px #979797',
       textAlign:'justify',
-      backgroundImage:"url('../../../../img/CardBg.jpg')",
+      backgroundImage:"url('https://github.com/DiThaNel/HunterxHunterCards/src/public/img/CardBg.png')",
       backgroundSize:'contain',
     },
     Typography: {
