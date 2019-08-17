@@ -30,7 +30,7 @@ export const Heroes = [
     habilidad3:'Velocidad de Dios (カンムル, Kanmuru): Con su cabello, sus manos y pies cambiado su aura en tipo eléctrico, su capacidad Kanmuru le permite reaccionar y mover su cuerpo a velocidades que normalmente sería imposible (incluso en el universo Hunter x Hunter). Esta capacidad cambia el aura de Killua en un campo capaz de transmitir todos los impulsos eléctricos de su cerebro en una línea recta directamente a la parte del cuerpo que quiere usar, evitando completamente su sistema nervioso.',
     habilidad4:'Eco Rítmico:  Un arte de asesinato, el Eco Rítmico es un movimiento que crea una sombra del cuerpo a través de una cadencia variable de pasos. Hay una ausencia total de ruido durante el movimiento y varios fantasmas.',
     habilidad5:'The Snake Awakens: Killua mueve sus brazos a una velocidad increíble, y corta todo lo que entra en contacto con el.',
-    habilidad6:'Paso sombra: Se mueva completamente en silencio al caminar. Es imperceptible si se utiliza Zetsu.',
+    habilidad6:'Paso sombra: Se mueve completamente en silencio al caminar. Es imperceptible si se utiliza Zetsu.',
   },
 
   {
