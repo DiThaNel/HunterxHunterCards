@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   search: {
-    border:'2.5px double #545454',
+    border:'2.5px double #686868',
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
     backgroundColor: fade(theme.palette.common.white, 0.15),
@@ -56,7 +56,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    color:'#545454',
+    color:'#686868',
   },
   inputRoot: {
     color: 'black',
@@ -64,7 +64,7 @@ const useStyles = makeStyles(theme => ({
   inputInput: {
     color:'black',
     fontFamily:"'Teko', sans-serif",
-    fontSize:'1.1rem',
+    fontSize:'1rem',
     padding: theme.spacing(1, 1, 1, 7),
     transition: theme.transitions.create('width'),
     width: '100%',

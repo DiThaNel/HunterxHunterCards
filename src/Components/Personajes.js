@@ -30,14 +30,14 @@ const useStyles = makeStyles(theme => ({
       
     },
     CardHeader: {
-      background: 'linear-gradient(45deg, rgb(64, 64, 64) 44%, rgb(241, 241, 241) 90%)',
+      backgroundImage: 'linear-gradient(45deg, rgb(64, 64, 64) 44%, rgb(241, 241, 241) 90%)',
       marginTop:'-2rem',
       position:'absolute',
       borderRadius: 7,
       marginLeft:'1rem',
       boxShadow:'0 4px 20px 0 rgba(0, 0, 0, 0.24), 0 7px 10px -5px rgb(96, 96, 96)',
       textAlign:'center',
-      padding:'0rem 2rem 0rem 1rem',
+      padding:'0rem 1.7rem 0rem 1rem',
       opacity:'0.9',
     },
     media: {
