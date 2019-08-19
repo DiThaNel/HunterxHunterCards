@@ -161,7 +161,7 @@ const useStyles = makeStyles(theme => ({
       );
   }
 
-  export default function RecipeReviewCard({nombre,img,edad,tipo,nem,info,estrellas,habilidad1,habilidad2,habilidad3,habilidad4,habilidad5,habilidad6,children}) {
+  export default function RecipeReviewCard({nombre,img,edad,tipo,nem,info,estrellas,habilidad1,habilidad2,habilidad3,habilidad4,habilidad5,habilidad6}) {
     const classes = useStyles();
     
 return (
