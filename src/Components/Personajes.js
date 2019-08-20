@@ -11,6 +11,7 @@ import Rating from '@material-ui/lab/Rating';
 import Box from '@material-ui/core/Box';
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 import Fade from '@material-ui/core/Fade';
+import Tilt from 'react-tilt';
 
 const labels = {
   1: '1 Estrella (Cazador Individual): Entregada a los cazadores que han hecho una contribución significativa en algún campo de conocimientos. Si se es un veterano, al recibirla pasan a ser Oficiales Superiores.',
@@ -164,8 +165,8 @@ const useStyles = makeStyles(theme => ({
     const classes = useStyles();
     
 return (
-  
 <div className='grow'>
+<Tilt className="Tilt" options={{ max : 15 , scale: 1}}>
   <Fade in={true} timeout={1200}>
         <Flippy
           flipOnHover={false}
@@ -256,6 +257,7 @@ return (
     </BackSide>
   </Flippy>
   </Fade>
+</Tilt>
 </div>
 );}
   
