@@ -12,7 +12,6 @@ import Box from '@material-ui/core/Box';
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 import Fade from '@material-ui/core/Fade';
 
-
 const labels = {
   1: '1 Estrella (Cazador Individual): Entregada a los cazadores que han hecho una contribución significativa en algún campo de conocimientos. Si se es un veterano, al recibirla pasan a ser Oficiales Superiores.',
   2: '2 Estrellas (Cazador Doble): Los cazadores con 1 Estrella, que han logrado que sus aprendices reciban 1 Estrella, reciben 2 Estrellas.',
@@ -27,7 +26,6 @@ const useStyles = makeStyles(theme => ({
       margin:'4rem 0.5rem 0rem 0.5rem',
       border:'double 3px #979797',
       cursor:'pointer',
-      
     },
     CardHeader: {
       backgroundImage: 'linear-gradient(45deg, rgb(64, 64, 64) 44%, rgb(241, 241, 241) 90%)',
@@ -152,14 +150,15 @@ const useStyles = makeStyles(theme => ({
     },
   }));
 
-  function IconContainer(title) {
-    const { value, ...id } = title;
-      return (
-        <Tooltip title={labels[value]}>
-          <div {...id} />
-        </Tooltip>
-      );
+  function IconContainer(props) {
+    const { value, ...other } = props;
+    return (
+      <Tooltip title={labels[value]}>
+        <div {...other} />
+      </Tooltip>
+    );
   }
+  
 
   export default function RecipeReviewCard({nombre,img,edad,tipo,nem,info,estrellas,habilidad1,habilidad2,habilidad3,habilidad4,habilidad5,habilidad6}) {
     const classes = useStyles();
@@ -172,7 +171,6 @@ return (
           flipOnHover={false}
           flipOnClick={true}
           flipDirection="horizontal" 
-          
         >
           
     <FrontSide  animationDuration={700}>
@@ -190,9 +188,9 @@ return (
           subheader={edad}
           action={
             <div>
-              <Box className={classes.Box} component="fieldset" borderColor="transparent" m={1}>
+              <Box className={classes.Box} component="fieldset" borderColor="transparent">
                 <Rating className={classes.Rating} name="hover-tooltip" value={estrellas} max={3} 
-                IconContainerComponent={IconContainer} 
+                IconContainerComponent={IconContainer}
                 />
               </Box>
             </div>

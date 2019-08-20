@@ -80,7 +80,6 @@ const useStyles = makeStyles(theme => ({
 export default function SearchAppBar({Busqueda,props}) {
   const classes = useStyles();
 
-
   return (
     <div className={classes.root}>
       <AppBar className={classes.AppBar} position="static">
