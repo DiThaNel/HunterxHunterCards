@@ -31,8 +31,6 @@ componentDidMount() {
     this.setState({Heroes:Heroes})
 }
 
-
-
 render() {
     const {Heroes} = this.state;
     const {searchField, Busqueda} = this.props;
@@ -48,4 +46,5 @@ render() {
         </div>
     ); 
 }}
+
 export default connect(mapStateToProps,mapDispatchToProps)(App);
