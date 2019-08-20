@@ -121,7 +121,7 @@ const useStyles = makeStyles(theme => ({
     },
     posicion3: {
       display:'flex',
-      paddingTop:'6.4rem',
+      paddingTop:'6rem',
       justifyContent:'space-between',
     },
     posicion3l: {
@@ -137,7 +137,7 @@ const useStyles = makeStyles(theme => ({
       height: '8rem',
       transform: 'rotate(57deg)',
       margin: 'auto',
-      marginLeft:'13rem',
+      marginLeft:'13.1rem',
       borderLeft:'1px solid white',
     },
     posicion4: {
