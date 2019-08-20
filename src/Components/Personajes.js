@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
       cursor:'pointer',
     },
     CardHeader: {
-      backgroundImage: 'linear-gradient(45deg, rgb(64, 64, 64) 44%, rgb(241, 241, 241) 90%)',
+      backgroundImage: 'linear-gradient(to right, #333333 0%, #d4d4d4 100%)',
       marginTop:'-2rem',
       position:'absolute',
       borderRadius: 7,
