@@ -85,7 +85,7 @@ const useStyles = makeStyles(theme => ({
       height: '9rem',
       transform: 'rotate(-57deg)',
       margin: 'auto',
-      marginLeft:'5rem',
+      marginLeft:'10rem',
       borderLeft:'1px solid white',
     },
     posicion1l1: {
@@ -93,7 +93,7 @@ const useStyles = makeStyles(theme => ({
       height: '9rem',
       transform: 'rotate(57deg)',
       margin: 'auto',
-      marginLeft:'-5rem',
+      marginLeft:'-10rem',
       borderLeft:'1px solid white',
     },
     posicion2: {
