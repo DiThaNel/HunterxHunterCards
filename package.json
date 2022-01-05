@@ -2,7 +2,7 @@
   "name": "roboticfriends",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://DiThaNel.github.io/dithanel.github.io",
+  "homepage": "http://DiThaNel.github.io/HunterxHunterCards",
   "dependencies": {
     "@material-ui/core": "^4.3.1",
     "@material-ui/icons": "^4.2.1",
